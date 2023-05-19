@@ -4,20 +4,9 @@ function AccordionView() {
   return (
     <main>
       <h1>Accordion</h1>
-      <section>
-        <h2>単体アコーディオン</h2>
-        <Accordion />
-      </section>
-      <section>
-        <h2>入れ子になったアコーディオン</h2>
-        <details>
-          <summary>アコーディオンのtitle</summary>
-          <details>
-            <summary>アコーディオンのsubtitle</summary>
-            pp
-          </details>
-        </details>
-      </section>
+      <Accordion summary={'アコーディオンのサマリーを入れます'}>
+        <p>ここに詳細な説明が入ります</p>
+      </Accordion>
     </main>
   );
 }

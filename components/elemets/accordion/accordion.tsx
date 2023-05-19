@@ -1,9 +1,16 @@
 // 入れ子できるようなアコーディオンは別のコンポーネントとして定義する
+import { ReactNode } from 'react';
 
-const Accordion: () => JSX.Element = () => {
+type Props = {
+  summary: string;
+  children: ReactNode;
+};
+
+const Accordion = (props: Props): JSX.Element => {
   return (
     <details>
-      <summary>アコーディオンのtitle</summary>
+      <summary>{props.summary}</summary>
+      {props.children}
     </details>
   );
 };
