@@ -16,12 +16,30 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+main {
+  padding: 12px;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] svg {
+  transform: rotate(180deg);
+}
+
+details div {
+  visibility: hidden;
+}
+
+details[open] div {
+  visibility: visible;
+  transition: line-height 0.3s ease-out, opacity 0.1s linear 0.1s,
+    visibility 0.1s linear 0.1s;
+  transition-duration: 300ms;
 }
