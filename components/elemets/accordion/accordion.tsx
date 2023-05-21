@@ -8,9 +8,24 @@ type Props = {
 };
 
 const Accordion = (props: Props): JSX.Element => {
+  const toggleAccordion = (event: any) => {
+    event.preventDefault();
+    const parent = event.currentTarget.parentNode;
+    let accordionOpenState = parent.open;
+
+    if (accordionOpenState) {
+      parent.removeAttribute('open');
+    } else {
+      parent.setAttribute('open', 'true');
+    }
+  };
+
   return (
-    <details>
-      <summary className="block flex items-center">
+    <details className="js-accordion">
+      <summary
+        className="flex items-center justify-between"
+        onClick={toggleAccordion}
+      >
         {props.summary}
         <ChevronDownIcon className="w-5 h-5 text-gray-500 ml-2 transition duration-300" />
       </summary>

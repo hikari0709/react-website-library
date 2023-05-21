@@ -20,13 +20,22 @@ main {
   padding: 12px;
 }
 
+details {
+  border: 1px solid #ccc;
+}
+
 summary {
   display: block;
   cursor: pointer;
+  padding: 12px;
 }
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #ccc;
 }
 
 details[open] svg {
@@ -35,6 +44,8 @@ details[open] svg {
 
 details div {
   visibility: hidden;
+  padding: 12px;
+  padding-left: 22px;
 }
 
 details[open] div {
