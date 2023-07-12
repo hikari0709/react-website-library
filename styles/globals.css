@@ -24,12 +24,6 @@ details {
   border: 1px solid #ccc;
 }
 
-summary {
-  display: block;
-  cursor: pointer;
-  padding: 12px;
-}
-
 summary::-webkit-details-marker {
   display: none;
 }
@@ -40,12 +34,6 @@ details[open] summary {
 
 details[open] svg {
   transform: rotate(180deg);
-}
-
-details div {
-  visibility: hidden;
-  padding: 12px;
-  padding-left: 22px;
 }
 
 details[open] div {
