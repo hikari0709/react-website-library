@@ -4,8 +4,13 @@
  * ・横スクロールの有無
  * ・colspanやrowspanも操作できるようにしたい、1行の単位をobjectで管理した方が良さそう
  */
+interface Cell {
+  text: string;
+  row?: number;
+  col?: number;
+}
 type Props = {
-  head: Array<Array<string>>;
+  head: Array<Array<Cell>>;
   body: Array<Array<string>>;
   bodyTableHeader?: Boolean;
 };
@@ -21,7 +26,7 @@ const Table = (props: Props): JSX.Element => {
                 key={cellIndex}
                 className="border border-solid border-gray-300"
               >
-                {cell}
+                {}
               </th>
             ))}
           </tr>
