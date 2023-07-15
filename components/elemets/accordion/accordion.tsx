@@ -6,11 +6,11 @@ type Props = {
   children: ReactNode;
 };
 
-const Accordion = (props: Props): JSX.Element => {
+const Accordion = ({ summary, children }: Props): JSX.Element => {
   return (
     <details className="rounded">
-      <summary className="p-2">{props.summary}</summary>
-      <div className="p-2">{props.children}</div>
+      <summary className="p-2">{summary}</summary>
+      <div className="p-2">{children}</div>
     </details>
   );
 };

@@ -5,12 +5,12 @@ type Props = {
   listItems: Array<string | ReactNode>;
 };
 
-const OrderedList = (props: Props) => {
+const OrderedList = ({ headingText, listItems }: Props) => {
   return (
     <section>
-      <p>{props.headingText}</p>
+      <p>{headingText}</p>
       <ol>
-        {props.listItems.map((item, itemIndex) => (
+        {listItems.map((item, itemIndex) => (
           <li key={`item${itemIndex}`}>{item}</li>
         ))}
       </ol>

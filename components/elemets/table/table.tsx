@@ -15,11 +15,11 @@ type Props = {
   bodyTableHeader?: Boolean;
 };
 
-const Table = (props: Props): JSX.Element => {
+const Table = ({ head, body, bodyTableHeader }: Props): JSX.Element => {
   return (
     <table className="border border-solid border-gray-300">
       <thead>
-        {props.head.map((row, rowIndex) => (
+        {head.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) => (
               <th
@@ -33,10 +33,10 @@ const Table = (props: Props): JSX.Element => {
         ))}
       </thead>
       <tbody>
-        {props.body.map((row, rowIndex) => (
+        {body.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) =>
-              props.bodyTableHeader && cellIndex === 0 ? (
+              bodyTableHeader && cellIndex === 0 ? (
                 <th
                   key={cellIndex}
                   className="border border-solid border-gray-300"

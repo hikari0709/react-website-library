@@ -6,12 +6,12 @@ type Props = {
   listItems: Array<string | ReactNode>;
 };
 
-const List = (props: Props) => {
+const List = ({ headingText, listItems }: Props) => {
   return (
     <section>
-      <p>{props.headingText}</p>
+      <p>{headingText}</p>
       <ul>
-        {props.listItems.map((item, itemIndex) => (
+        {listItems.map((item, itemIndex) => (
           <li key={`item${itemIndex}`}>{item}</li>
         ))}
       </ul>
