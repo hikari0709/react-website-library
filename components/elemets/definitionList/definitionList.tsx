@@ -1,15 +1,18 @@
 import ReactNode from 'react';
 
 type Props = {
-  listItem: {};
+  listItem: {
+    title: string;
+    detail: string;
+  };
 };
 
-const DefinitionList = (props: Props) => {
+const DefinitionList = ({ listItem }: Props) => {
   return (
     <dl>
       <div>
-        <dt>{props.listItem.title}</dt>
-        <dd>{props.listItem}</dd>
+        <dt>{listItem.title}</dt>
+        <dd>{listItem.detail}</dd>
       </div>
     </dl>
   );
