@@ -6,8 +6,8 @@ const DefinitionListView = () => {
       <h1>説明付きリスト</h1>
       <DefinitionList
         listItem={{
-          title: '',
-          detail: '',
+          title: '説明リストのタイトル',
+          detail: '説明リストの詳細',
         }}
       />
     </main>
