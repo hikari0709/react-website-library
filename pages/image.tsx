@@ -1,4 +1,4 @@
-import Images from '@/components/elemets/images/images';
+import Images from '@/components/elemets/image/image';
 
 const ImagesView = () => {
   return (
