@@ -7,18 +7,17 @@ type Props = {
 
 const Heading = ({ level, children }: Props) => {
   let HeadingTag = level as ElementType;
-  let element = <HeadingTag>{children}</HeadingTag>;
+  let returnHtml = <HeadingTag>{children}</HeadingTag>;
 
   if (typeof children === 'object') {
-    console.log('objectだよ');
-    element = (
+    returnHtml = (
       <hgroup>
         <HeadingTag>{children}</HeadingTag>
       </hgroup>
     );
   }
 
-  return element;
+  return returnHtml;
 };
 
 export default Heading;
