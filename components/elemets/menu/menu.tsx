@@ -22,7 +22,7 @@ const Menu = ({ menuItem }: Props) => {
 
   return (
     <menu>
-      <ul>
+      <ul className="flex">
         {menuItem.map((item, itemIndex) => generateItem(item, itemIndex))}
       </ul>
     </menu>
