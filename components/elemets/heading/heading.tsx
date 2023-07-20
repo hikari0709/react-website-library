@@ -1,18 +1,20 @@
 import { ReactNode, ElementType } from 'react';
 
 type Props = {
-  level: string;
-  children: ReactNode;
+  level: number;
+  text: string;
+  children?: ReactNode;
 };
 
-const Heading = ({ level, children }: Props) => {
-  let HeadingTag = level as ElementType;
-  let returnHtml = <HeadingTag>{children}</HeadingTag>;
+const Heading = ({ level, text, children }: Props) => {
+  let HeadingTag = `h${level}` as ElementType;
+  let returnHtml = <HeadingTag>{text}</HeadingTag>;
 
-  if (typeof children === 'object') {
+  if (children) {
     returnHtml = (
       <hgroup>
-        <HeadingTag>{children}</HeadingTag>
+        <HeadingTag>{text}</HeadingTag>
+        {children}
       </hgroup>
     );
   }
