@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Card = ({ headingText, children }: Props): JSX.Element => {
+const Card = ({ headingText, children }: Props) => {
   return (
     <div className="rounded border border-solid border-gray-300">
       <div>{headingText}</div>
