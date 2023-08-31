@@ -5,7 +5,13 @@ const HeadingView = () => {
     <main>
       <Heading
         level={1}
-        text="Headingタグで囲まれたテキストがここに入ります。"
+        text="h1タグで囲まれたテキストがここに入ります。"
+      >
+        <p>subtitleを入力する場合</p>
+      </Heading>
+      <Heading
+        level={2}
+        text="h2タグで囲まれたテキストがここに入ります。"
       >
         <p>subtitleを入力する場合</p>
       </Heading>
