@@ -1,20 +1,15 @@
-import Heading from '@/components/elemets/heading/heading';
+import PrimaryHeading from '@/components/elemets/heading/primaryHeading';
+import SecondaryHeading from '@/components/elemets/heading/secondaryHeading';
 
 const HeadingView = () => {
   return (
     <main>
-      <Heading
-        level={1}
-        text="h1タグで囲まれたテキストがここに入ります。"
-      >
+      <PrimaryHeading text="h1タグで囲まれたテキストがここに入ります。">
         <p>subtitleを入力する場合</p>
-      </Heading>
-      <Heading
-        level={2}
-        text="h2タグで囲まれたテキストがここに入ります。"
-      >
+      </PrimaryHeading>
+      <SecondaryHeading text="h2タグで囲まれたテキストがここに入ります。">
         <p>subtitleを入力する場合</p>
-      </Heading>
+      </SecondaryHeading>
     </main>
   );
 };

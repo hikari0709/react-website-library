@@ -45,6 +45,24 @@ const Heading = ({ level, text, children }: Props) => {
 
 export default Heading;
 
+
+// .heading-primary {
+//     margin-bottom: 24px;
+//     font-size: 2.8rem;
+//     line-height: 1.5
+// }
+
+// .heading-secondary {
+//     margin-bottom: 24px;
+//     border-left: 4px solid #dd171f;
+//     padding: 12px 0 12px 14px;
+//     color: #212121;
+//     font-size: 2.2rem;
+//     line-height: 1.5;
+//     font-weight: bold;
+//     letter-spacing: 1px
+// }
+
 // .heading-tertiary {
 //     font-size: 2rem;
 //     line-height: 1.5;
