@@ -5,8 +5,9 @@ const AnchorView = () => {
     <main>
       <h1>Anchor</h1>
       <Anchor
-        url="exampleURL"
+        url="https://hikkoshizamurai.jp/estimate/simulator/"
         external={true}
+        supplementText={true}
       >
         anchor
       </Anchor>
