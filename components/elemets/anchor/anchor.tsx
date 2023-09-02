@@ -6,13 +6,23 @@ type Props = {
   url: string;
   children: string;
   external?: boolean;
+  supplementText?: boolean;
 };
 
-const Anchor = ({ url, external, children }: Props) => {
+const Anchor = ({ url, external, supplementText, children }: Props) => {
   const fixedParams = '?text=tes';
   let attributeValues = {
     href: url + fixedParams,
   };
+
+  let returnHtml = (
+    <a
+      {...attributeValues}
+      className="text-blue-700 underline"
+    >
+      ${children}
+    </a>
+  );
 
   if (external) {
     Object.assign(attributeValues, {
@@ -21,7 +31,21 @@ const Anchor = ({ url, external, children }: Props) => {
     });
   }
 
-  return <a {...attributeValues}>{children}</a>;
+  if (supplementText) {
+    returnHtml = (
+      <p>
+        参考：
+        <a
+          {...attributeValues}
+          className="text-blue-700 underline"
+        >
+          {children}
+        </a>
+      </p>
+    );
+  }
+
+  return returnHtml;
 };
 
 export default Anchor;
