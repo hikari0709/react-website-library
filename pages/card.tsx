@@ -1,13 +1,13 @@
-import Card from '@/components/elemets/card/card';
+import CardStyled from '@/components/elemets/cardStyled/cardStyled';
 
 function CardView() {
   return (
     <main>
       <h1>Card</h1>
-      <Card headingText={'cardにheadingを設定したいときに入力してください'}>
+      <CardStyled title={'cardにheadingを設定したいときに入力してください'}>
         <p>cardのコンテンツをここに入れます</p>
         <div>HTMLなども入れることも自由に入れることができます。</div>
-      </Card>
+      </CardStyled>
     </main>
   );
 }
