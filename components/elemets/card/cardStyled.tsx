@@ -15,7 +15,7 @@ const CardStyled = styled.div`
   padding: 8px;
 `;
 
-const ImageFlame = styled.div`
+const ImageFrame = styled.div`
   width: 100%;
   height: auto;
   margin-bottom: 12px;
@@ -42,14 +42,14 @@ const Detail = styled.p`
 const Card: FC<Props> = ({ title, children }) => {
   return (
     <CardStyled>
-      <ImageFlame>
+      <ImageFrame>
         <Image
           src="https://placehold.jp/640x360.png"
           alt=""
           width={640}
           height={360}
         />
-      </ImageFlame>
+      </ImageFrame>
       <Body>
         <Title>{title}</Title>
         <Detail>{children}</Detail>

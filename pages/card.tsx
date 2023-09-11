@@ -1,4 +1,4 @@
-import CardStyled from '@/components/elemets/cardStyled/cardStyled';
+import CardStyled from '@/components/elemets/card/cardStyled';
 
 function CardView() {
   return (
