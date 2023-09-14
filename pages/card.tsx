@@ -1,5 +1,6 @@
 import CardStyled from '@/components/elemets/card/cardStyled';
 import CardVanillaExtract from '@/components/elemets/card/vanillaExtractCard';
+import CardTailwind from '@/components/elemets/card/tailwindCard';
 
 function CardView() {
   return (
@@ -15,6 +16,10 @@ function CardView() {
         cardのコンテンツをここに入れます
         HTMLなども入れることも自由に入れることができます。
       </CardVanillaExtract>
+      <CardTailwind title={'cardにheadingを設定したいときに入力してください'}>
+        cardのコンテンツをここに入れます
+        HTMLなども入れることも自由に入れることができます。
+      </CardTailwind>
     </main>
   );
 }

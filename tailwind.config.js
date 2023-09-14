@@ -22,6 +22,9 @@ module.exports = {
           },
         },
       },
+      colors: {
+        defaultBorder: '#ccc',
+      },
     },
   },
   plugins: [require('tw-elements/dist/plugin')],
