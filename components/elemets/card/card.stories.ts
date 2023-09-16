@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Styled from './cardStyled';
+import Styled from './styledCard';
 import VanillaExtract from './vanillaExtractCard';
+import Tailwind from './tailwindCard';
+import Modules from './modulesCard';
 
 const meta = {
   title: 'Components/Card',
-  component: VanillaExtract,
+  component: Modules,
   parameters: {
     layout: 'centered',
   },

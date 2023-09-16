@@ -1,6 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
 import Image from 'next/image';
 
+/**
+ * 画像が必ずあるとは限らないので変数もしくはchildrenとしての扱いに変える
+ * そうなるとcardコンポーネントはborderとpaddingを持っているだけのものになる？
+ * paddingも画像をcardコンポーネント全体に広げて表示したい場合には必要がない時もある
+ * 調整したいところは、border-radiusの有無、大きさも調整したい？とpaddingの有無と大きさ
+ * もしかするとPRなどつけたい時にラップするborderの色や太さ、種類も変えたい場合もあるかもしれない
+ */
+
 type Props = PropsWithChildren<{ title: string }>;
 
 const Card: FC<Props> = ({ title, children }) => {
