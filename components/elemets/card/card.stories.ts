@@ -1,12 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Styled from './styledCard';
-import VanillaExtract from './vanillaExtractCard';
-import Tailwind from './tailwindCard';
-import Modules from './modulesCard';
+import Card from './card';
 
 const meta = {
   title: 'Components/Card',
-  component: Modules,
+  component: Card,
   parameters: {
     layout: 'centered',
   },
@@ -14,20 +11,12 @@ const meta = {
   argTypes: {
     title: { control: 'label' },
   },
-} satisfies Meta<typeof Styled>;
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const cardStyled: Story = {
-  args: {
-    title: 'cardにheadingを設定したいときに入力してください',
-    children:
-      'cardのコンテンツをここに入れます。HTMLなども入れることも自由に入れることができます',
-  },
-};
-
-export const cardVanillaExtract: Story = {
+export const card: Story = {
   args: {
     title: 'cardにheadingを設定したいときに入力してください',
     children:

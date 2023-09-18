@@ -1,6 +1,6 @@
+import Card from '@/components/elemets/card/card';
 import CardStyled from '@/components/elemets/card/styledCard';
 import CardVanillaExtract from '@/components/elemets/card/vanillaExtractCard';
-import CardTailwind from '@/components/elemets/card/tailwindCard';
 import CardModules from '@/components/elemets/card/modulesCard';
 
 function CardView() {
@@ -15,10 +15,10 @@ function CardView() {
         cardのコンテンツをここに入れます
         HTMLなども入れることも自由に入れることができます。
       </CardVanillaExtract>
-      <CardTailwind title={'TailwindCSSでスタイルを記述'}>
+      <Card title={'TailwindCSSでスタイルを記述'}>
         cardのコンテンツをここに入れます
         HTMLなども入れることも自由に入れることができます。
-      </CardTailwind>
+      </Card>
       <CardModules title={'CSS Modulesでスタイルを記述'}>
         cardのコンテンツをここに入れます
         HTMLなども入れることも自由に入れることができます。
