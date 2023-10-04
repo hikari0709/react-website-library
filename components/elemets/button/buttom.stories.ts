@@ -15,8 +15,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    label: '無料',
     children:
-      'HTMLをラップすることでButton要素の中を自由にレイアウトするタイプのボタンです',
+      'HTMLをラップすることでButton要素の中を<br>自由にレイアウトするタイプのボタンです',
   },
 };
 
