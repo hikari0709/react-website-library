@@ -6,23 +6,23 @@ type Props = {
 };
 
 const Tab: FC<Props> = ({ tabs, children }) => {
-  const [activeTab, setActiveTab] = useState('tab1');
+  const [activeTab, setActiveTab] = useState(0);
   const childrenArray = React.Children.toArray(children);
 
-  const handleClick = (tab: string) => {
+  const handleClick = (tab: number) => {
     setActiveTab(tab);
   };
 
   return (
     <div>
       <div className="w-2/4 flex gap-2">
-        {tabs.map((tab) => (
+        {tabs.map((tab, index) => (
           <button
-            key={tab}
-            data-tab={tab}
-            onClick={() => handleClick(tab)}
+            key={`tab-${index}`}
+            data-tab={index}
+            onClick={() => handleClick(index)}
             className={`border border-t-4 border-b-0 rounded-t-sm flex-grow ${
-              activeTab === tab
+              activeTab === index
                 ? 'border-brand-600 bg-white'
                 : 'border-divider bg-gray-100'
             }`}
@@ -32,8 +32,7 @@ const Tab: FC<Props> = ({ tabs, children }) => {
         ))}
       </div>
       <div className="w-2/4 border border-divider p-4 -mt-1px">
-        {activeTab === 'tab1' && childrenArray[0]}
-        {activeTab === 'tab2' && childrenArray[1]}
+        {childrenArray[activeTab]}
       </div>
     </div>
   );
