@@ -18,7 +18,7 @@ const Button = ({ children, type = 'primary', label }: Props) => {
   const textColor = type === 'secondary' ? 'text-gray-800' : 'text-white';
   return (
     <button
-      className={`p-2 border border-defaultBorder rounded ${backgroundColor} ${textColor}`}
+      className={`bg-brand-50 p-2 border-divider rounded ${backgroundColor} ${textColor}`}
     >
       {label && (
         <span className="text-green-600 bg-white p-1 rounded-sm mr-2">
