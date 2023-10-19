@@ -12,7 +12,7 @@ const Tab: FC<Props> = ({ tabs, children }) => {
   const handleClick = (tab: number) => {
     setActiveTab(tab);
   };
-
+ // tabItemは配列ではなくて、コンポーネントで定義してchildrenとして扱うのがいいかもしれない
   return (
     <div>
       <div className="w-2/4 flex gap-2">
@@ -21,7 +21,7 @@ const Tab: FC<Props> = ({ tabs, children }) => {
             key={`tab-${index}`}
             data-tab={index}
             onClick={() => handleClick(index)}
-            className={`border border-t-4 border-b-0 rounded-t-sm flex-grow ${
+            className={`border border-t-4 border-b-0 rounded-t-sm p-1 flex-grow ${
               activeTab === index
                 ? 'border-brand-600 bg-white'
                 : 'border-divider bg-gray-100'
