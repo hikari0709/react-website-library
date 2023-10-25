@@ -12,7 +12,6 @@ const Tab: FC<Props> = ({ tabs, children }) => {
   const handleClick = (tab: number) => {
     setActiveTab(tab);
   };
- // tabItemは配列ではなくて、コンポーネントで定義してchildrenとして扱うのがいいかもしれない
   return (
     <div>
       <div className="w-2/4 flex gap-2">
