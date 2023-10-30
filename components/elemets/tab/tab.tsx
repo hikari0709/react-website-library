@@ -1,12 +1,13 @@
 import React, { FC, PropsWithChildren, ReactNode, useState } from 'react';
 
 type Props = {
+  initialActiveTab: number;
   tabs: string[];
   children: PropsWithChildren<ReactNode>;
 };
 
-const Tab: FC<Props> = ({ tabs, children }) => {
-  const [activeTab, setActiveTab] = useState(0);
+const Tab: FC<Props> = ({ initialActiveTab = 0, tabs, children }) => {
+  const [activeTab, setActiveTab] = useState(initialActiveTab);
   const childrenArray = React.Children.toArray(children);
 
   const handleClick = (tab: number) => {
