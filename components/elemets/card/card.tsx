@@ -9,11 +9,15 @@ import Image from 'next/image';
  * もしかするとPRなどつけたい時にラップするborderの色や太さ、種類も変えたい場合もあるかもしれない
  */
 
-type Props = PropsWithChildren<{ title: string }>;
+type Props = PropsWithChildren<{
+  title: string;
+  bgColor?: string;
+  advanced?: boolean;
+}>;
 
-const Card: FC<Props> = ({ title, children }) => {
+export const Card: FC<Props> = ({ title, children, bgColor }) => {
   return (
-    <div className="w-72 rounded p-2 border border-defaultBorder">
+    <div className={`w-72 rounded p-2 border border-defaultBorder ${bgColor}`}>
       <div className="w-full h-auto mb-3">
         <Image
           src="https://placehold.jp/640x360.png"
@@ -29,5 +33,3 @@ const Card: FC<Props> = ({ title, children }) => {
     </div>
   );
 };
-
-export default Card;

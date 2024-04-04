@@ -1,17 +1,20 @@
-import PrimaryHeading from '@/components/elemets/heading/primaryHeading';
-import SecondaryHeading from '@/components/elemets/heading/secondaryHeading';
+import React from 'react';
+import PrimaryHeading from '@/components/elemets/Heading/PrimaryHeading';
 
-const HeadingView = () => {
+const HomePage = () => {
   return (
-    <main>
-      <PrimaryHeading text="h1タグで囲まれたテキストがここに入ります。">
-        <p>subtitleを入力する場合</p>
+    <div>
+      <PrimaryHeading
+        as="h1"
+        style="display:none;"
+        className="first-letter:"
+      >
+        Hello, Next.js!
       </PrimaryHeading>
-      <SecondaryHeading text="h2タグで囲まれたテキストがここに入ります。">
-        <p>subtitleを入力する場合</p>
-      </SecondaryHeading>
-    </main>
+      <Heading as="h2">Subheading</Heading>
+      <Heading as="h3">Another Subheading</Heading>
+    </div>
   );
 };
 
-export default HeadingView;
+export default HomePage;

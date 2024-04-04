@@ -1,4 +1,4 @@
-import Accordion from '@/components/elemets/accordion/accordion';
+import Accordion from '@/components/elemets/Accordion/Accordion';
 
 function AccordionView() {
   return (

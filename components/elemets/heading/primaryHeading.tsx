@@ -1,23 +1,12 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
+type exclusionOptional = 'className' | 'style';
 type Props = {
-  text: string;
-  children?: ReactNode;
+  name: string;
 };
 
-const primaryHeading = ({ text, children }: Props) => {
-  let returnHtml = <h1 className="mb-6 text-2xl">{text}</h1>;
-
-  if (children) {
-    returnHtml = (
-      <hgroup className="mb-6">
-        <h1 className="mb-1 text-2xl">{text}</h1>
-        {children}
-      </hgroup>
-    );
-  }
-
-  return returnHtml;
+const Component:FC<Props> = ({ name }) => {
+  return <p>{name}</p>;
 };
 
-export default primaryHeading;
+export default Component;

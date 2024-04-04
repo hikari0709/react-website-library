@@ -1,4 +1,4 @@
-import Table from '@/components/elemets/table/table';
+import { Table } from '@/components/elemets/Table/Table';
 
 function TableView() {
   return (

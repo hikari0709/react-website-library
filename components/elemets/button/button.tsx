@@ -13,7 +13,7 @@ type Props = {
  * ボタンテキストを好きなところで改行したという要望もあるかもしれないけどそれにはどう対応するか？
  */
 
-const Button = ({ children, type = 'primary', label }: Props) => {
+export const Button = ({ children, type = 'primary', label }: Props) => {
   const backgroundColor = type === 'secondary' ? 'bg-gray-50' : 'bg-green-600';
   const textColor = type === 'secondary' ? 'text-gray-800' : 'text-white';
   return (
@@ -29,5 +29,3 @@ const Button = ({ children, type = 'primary', label }: Props) => {
     </button>
   );
 };
-
-export default Button;

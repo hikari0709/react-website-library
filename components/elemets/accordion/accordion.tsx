@@ -2,12 +2,12 @@
 import { ReactNode, useState } from 'react';
 
 type Props = {
-  initialActive: boolean;
+  initialActive?: boolean;
   summary: string;
   children: ReactNode;
 };
 
-const Accordion = ({
+export const Accordion = ({
   initialActive = false,
   summary,
   children,
@@ -23,5 +23,3 @@ const Accordion = ({
     </details>
   );
 };
-
-export default Accordion;

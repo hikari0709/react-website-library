@@ -15,7 +15,7 @@ type Props = {
   bodyTableHeader?: Boolean;
 };
 
-const Table = ({ head, body, bodyTableHeader }: Props): JSX.Element => {
+export const Table = ({ head, body, bodyTableHeader }: Props): JSX.Element => {
   return (
     <table className="border border-solid border-gray-300">
       <thead>
@@ -58,5 +58,3 @@ const Table = ({ head, body, bodyTableHeader }: Props): JSX.Element => {
     </table>
   );
 };
-
-export default Table;

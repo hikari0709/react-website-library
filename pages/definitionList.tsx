@@ -1,4 +1,4 @@
-import DefinitionList from '@/components/elemets/definitionList/definitionList';
+import DefinitionList from '@/components/elemets/DefinitionList/DefinitionList';
 
 const DefinitionListView = () => {
   return (

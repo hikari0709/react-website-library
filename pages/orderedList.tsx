@@ -1,4 +1,4 @@
-import OrderedList from '@/components/elemets/orderedList/orderedList';
+import OrderedList from '@/components/elemets/OrderedList/OrderedList';
 
 const OrderedListView = () => {
   return (

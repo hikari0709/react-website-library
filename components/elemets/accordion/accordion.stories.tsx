@@ -1,18 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Accordion from './accordion';
+import { Accordion } from './Accordion';
 
 const meta = {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
-    layout: 'centerd',
+    layout: 'centered',
   },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const accordion: Story = {
+export const Default: Story = {
   args: {
     initialActive: false,
     summary: 'summaryが入ります',
@@ -20,7 +21,7 @@ export const accordion: Story = {
   },
 };
 
-export const accordionOpen: Story = {
+export const AccordionOpen: Story = {
   args: {
     initialActive: true,
     summary: 'summaryが入ります',

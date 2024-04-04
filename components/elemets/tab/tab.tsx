@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren, ReactNode, useState } from 'react';
 
 type Props = {
-  initialActiveTab: number;
+  initialActiveTab?: number;
   tabs: string[];
   children: PropsWithChildren<ReactNode>;
 };

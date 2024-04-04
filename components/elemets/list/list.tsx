@@ -1,22 +1,40 @@
-import React from 'react';
-import { ReactNode } from 'react';
+import { FC, ReactNode, ComponentPropsWithoutRef } from 'react';
+import { tv } from 'tailwind-variants';
 
 type Props = {
-  headingText?: string;
-  listItems: Array<string | ReactNode>;
+  as?: 'ul' | 'ol';
+  nested?: boolean;
+  className?: string;
 };
 
-const List = ({ headingText, listItems }: Props) => {
+const list = tv({
+  base: 'ml-7',
+  variants: {
+    nested: {
+      true: 'text-red-700',
+    },
+  },
+  compoundVariants: [
+    {
+      nested: true,
+      class: 'ml-5',
+    },
+  ],
+});
+
+export const List = ({ as: Tag = 'ul', nested, className }: Props) => {
   return (
-    <section>
-      <p>{headingText}</p>
-      <ul>
-        {listItems.map((item, itemIndex) => (
-          <li key={`item${itemIndex}`}>{item}</li>
-        ))}
-      </ul>
-    </section>
+    <Tag className={className}>
+      <li>list1</li>
+      <li>list2</li>
+    </Tag>
   );
 };
 
-export default List;
+type PropsText = {
+  children: ReactNode;
+};
+
+export const Text: FC<PropsText> = ({ children }) => {
+  return <p>{children}</p>;
+};

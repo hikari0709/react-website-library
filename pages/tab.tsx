@@ -1,4 +1,4 @@
-import Tab from '@/components/elemets/tab/tab';
+import Tab from '@/components/elemets/Tab/Tab';
 
 const TabView = () => {
   return (

@@ -1,4 +1,4 @@
-import Menu from '@/components/elemets/menu/menu';
+import Menu from '@/components/elemets/Menu/Menu';
 
 const MenuView = () => {
   return (

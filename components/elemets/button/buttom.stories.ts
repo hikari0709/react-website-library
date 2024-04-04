@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from './button';
+import { Button } from './Button';
 
 const meta = {
   title: 'Components/Button',
@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     label: '無料',
     children:
@@ -21,7 +21,7 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const NoFreeLabel: Story = {
   args: {
     type: 'secondary',
     children:

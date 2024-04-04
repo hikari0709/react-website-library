@@ -18,6 +18,6 @@
       "@/*": ["./*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/accordion.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/accordion.tsx", "pages/heading.tsx"],
   "exclude": ["node_modules"]
 }

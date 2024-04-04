@@ -38,7 +38,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tw-elements/dist/plugin')],
 };
 
 export default config;

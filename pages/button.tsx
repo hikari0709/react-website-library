@@ -1,4 +1,4 @@
-import Button from '@/components/elemets/button/button';
+import { Button } from '@/components/elemets/Button/Button';
 
 const ButtonView = () => {
   return (

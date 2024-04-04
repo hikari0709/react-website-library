@@ -1,15 +1,11 @@
-import List from '@/components/elemets/list/list';
+import React, { FC, PropsWithChildren, ReactNode } from 'react';
+import { Text } from '@/components/elemets/List/List';
 
 const ListView = () => {
   return (
-    <main>
-      <h1>通常のリスト（ul）</h1>
-      <List
-        headingText="listのheadingテキスト"
-        listItems={['apple', 'orange']}
-      />
-    </main>
+    <section>
+      <Text>テキスト</Text>
+    </section>
   );
 };
-
 export default ListView;

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Tab from './tab';
+import Tab from './Tab';
 
 const meta = {
   title: 'Components/Tab',
@@ -21,7 +21,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const tab: Story = {
+export const Default: Story = {
   args: {
     initialActiveTab: 0,
     tabs: ['tab1', 'tab2'],
@@ -35,7 +35,7 @@ export const tab: Story = {
   },
 };
 
-export const tab2: Story = {
+export const SelectedSecondaryTab: Story = {
   args: {
     initialActiveTab: 1,
     tabs: ['tab1', 'tab2'],
