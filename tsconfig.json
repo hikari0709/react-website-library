@@ -16,8 +16,21 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
-    }
+      "@/components": ["./src/app/components/ui-components"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/accordion.tsx", "pages/heading.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app/(ui-components)/accordion.tsx",
+    "src/app/(ui-components)/heading/page.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
