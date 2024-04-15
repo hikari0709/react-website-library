@@ -1,4 +1,4 @@
-import { Card } from '@/src/app/components/ui-components/Card/';
+import { Card } from '@/components/Card/';
 
 const Page = () => {
   return (

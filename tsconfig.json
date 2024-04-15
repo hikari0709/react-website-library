@@ -14,9 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components": ["./src/app/components/ui-components"]
+      "@/components/*": ["./src/app/components/ui-components/*"]
     },
     "plugins": [
       {
