@@ -1,4 +1,4 @@
-import { Divider } from '@/src/app/components/ui-components/Divider/';
+import { Divider } from '@/components/Divider/';
 
 const DividerView = () => {
   return (

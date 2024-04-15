@@ -1,4 +1,4 @@
-import { Menu } from '@/src/app/components/ui-components/Menu/';
+import { Menu } from '@/components/Menu/';
 
 const MenuView = () => {
   return (

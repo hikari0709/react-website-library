@@ -1,4 +1,4 @@
-import { Tab } from '@/src/app/components/ui-components/Tab/Tab';
+import { Tab } from '@/components/Tab';
 
 const TabView = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren, ReactNode } from 'react';
-import { List } from '@/src/app/components/ui-components/List/';
+import { List } from '@/components/List/';
 
 const ListView = () => {
   return (

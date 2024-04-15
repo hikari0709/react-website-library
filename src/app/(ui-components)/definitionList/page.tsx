@@ -1,4 +1,4 @@
-import { DefinitionList } from '@/src/app/components/ui-components/DefinitionList/DefinitionList';
+import { DefinitionList } from '@/components/DefinitionList/';
 
 const DefinitionListView = () => {
   return (

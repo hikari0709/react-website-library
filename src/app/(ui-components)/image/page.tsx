@@ -1,4 +1,4 @@
-import { Images } from '@/src/app/components/ui-components/Image/';
+import { Images } from '@/components/Image/';
 
 const ImagesView = () => {
   return (

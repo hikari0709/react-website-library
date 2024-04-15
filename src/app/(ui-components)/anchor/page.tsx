@@ -1,4 +1,4 @@
-import { Anchor } from '@/src/app/components/ui-components/anchor/';
+import { Anchor } from '@/components/anchor/';
 
 const Page = () => {
   return (

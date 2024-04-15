@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrimaryHeading } from '@/src/app/components/ui-components/Heading/';
+import { PrimaryHeading } from '@/components/Heading/';
 
 const Page = () => {
   return (
