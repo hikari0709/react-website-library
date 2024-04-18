@@ -7,8 +7,8 @@ const ImagesView = () => {
       <Images
         src="text.jpg"
         alt="test"
-        width="500"
-        height="500"
+        width={500}
+        height={500}
       />
     </main>
   );

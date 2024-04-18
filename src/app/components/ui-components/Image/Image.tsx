@@ -1,15 +1,17 @@
 'use client';
+
+import Image from 'next/image';
 type Props = {
   src: string;
   alt: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   caption?: string;
 };
 
 export const Images = ({ src, alt, width, height, caption }: Props) => {
   const shared = (
-    <img
+    <Image
       src={src}
       alt={alt}
       width={width}
