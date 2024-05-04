@@ -1,10 +1,11 @@
 'use client';
-import { FC, PropsWithChildren, ComponentProps } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { tv } from 'tailwind-variants';
 
 type Props = {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-} & ComponentProps<'h1'>;
+  text: string;
+} & HTMLAttributes<HTMLElement>;
 
 const style = tv({
   base: 'font-bold',
@@ -20,9 +21,13 @@ const style = tv({
   },
 });
 
-export const Heading: FC<PropsWithChildren<Props>> = ({
-  children,
-  as: Tag,
-}) => {
-  return <Tag className={style({ heading: Tag })}>{children}</Tag>;
+export const Heading: FC<Props> = ({ as: Tag, text, ...args }) => {
+  return (
+    <Tag
+      className={style({ heading: Tag })}
+      {...args}
+    >
+      {text}
+    </Tag>
+  );
 };
