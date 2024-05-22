@@ -1,10 +1,10 @@
 import React, { FC, PropsWithChildren, ReactNode } from 'react';
-import { List } from '@/components/List/';
+import { UnorderedList } from '@/src/app/components/ui-components/UnorderedList';
 
 const ListView = () => {
   return (
     <section>
-      <List />
+      <UnorderedList />
     </section>
   );
 };
