@@ -14,7 +14,6 @@ export const Default: Story = {
   args: {
     horizontal: false,
     type: 'solid',
-    spacing: 1,
   },
 };
 
@@ -22,14 +21,5 @@ export const Dashed: Story = {
   args: {
     horizontal: false,
     type: 'dashed',
-    spacing: 1,
-  },
-};
-
-export const Dotted: Story = {
-  args: {
-    horizontal: false,
-    type: 'dotted',
-    spacing: 1,
   },
 };

@@ -12,13 +12,6 @@ const divider = tv({
     type: {
       solid: 'border-solid',
       dashed: 'border-dashed',
-      dotted: 'border-dotted',
-    },
-    spacing: {
-      1: 'mt-1',
-      2: 'mt-2',
-      4: 'mt-4',
-      8: 'mt-8',
     },
   },
 });
@@ -29,10 +22,6 @@ type Props = {
   horizontal?: boolean;
 } & DividerVariants;
 
-export const Divider: FC<Props> = ({
-  horizontal = false,
-  type = 'solid',
-  spacing = 1,
-}) => {
-  return <div className={divider({ horizontal, type, spacing })}></div>;
+export const Divider: FC<Props> = ({ horizontal = false, type = 'solid' }) => {
+  return <div className={divider({ horizontal, type })}></div>;
 };
