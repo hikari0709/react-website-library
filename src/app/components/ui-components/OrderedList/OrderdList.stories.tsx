@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { OrderedList } from './OrderedList';
-import { ListItem } from '@/components/ListItem';
 
 const meta = {
   title: 'Components/OrderedList',
@@ -11,11 +10,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => (
-    <OrderedList>
-      <ListItem>Item 1</ListItem>
-      <ListItem>Item 2</ListItem>
-      <ListItem>Item 3</ListItem>
-    </OrderedList>
-  ),
+  args: {
+    listItems: [
+      { key: 'Item 1', content: 'Item 1' },
+      { key: 'Item 2', content: 'Item 2' },
+    ],
+  },
 };
