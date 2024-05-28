@@ -17,7 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["./src/app/components/ui-components/*"]
+      "@/components/*": ["./src/app/components/*"]
     },
     "plugins": [
       {
