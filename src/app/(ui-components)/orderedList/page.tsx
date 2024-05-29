@@ -1,4 +1,4 @@
-import { OrderedList } from '@/components/OrderedList';
+import { OrderedList } from '@/components/ui-components/OrderedList';
 
 const OrderedListView = () => {
   return (
