@@ -1,20 +1,25 @@
-'use client';
-import { ReactNode } from 'react';
+import { FC, ComponentProps, ReactNode } from 'react';
+import { twJoin } from 'tailwind-merge';
+import { ListItem } from '@/components/ListItem';
 
-type Props = {
-  headingText?: string;
-  listItems: Array<string | ReactNode>;
+type ListItemProps = {
+  content: ReactNode;
 };
 
-export const OrderedList = ({ headingText, listItems }: Props) => {
+type Props = {
+  listItems: ListItemProps[];
+} & Omit<ComponentProps<'ol'>, 'role' | 'class'>;
+
+export const OrderedList: FC<Props> = ({ listItems, ...atr }) => {
   return (
-    <section>
-      <p>{headingText}</p>
-      <ol>
-        {listItems.map((item, itemIndex) => (
-          <li key={`item${itemIndex}`}>{item}</li>
-        ))}
-      </ol>
-    </section>
+    <ol
+      role="list"
+      className={twJoin('list-decimal flex flex-col gap-y-1')}
+      {...atr}
+    >
+      {listItems.map((item, index) => (
+        <ListItem key={index}>{item.content}</ListItem>
+      ))}
+    </ol>
   );
 };

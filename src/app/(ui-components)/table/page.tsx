@@ -1,4 +1,4 @@
-import { Table } from '@/components/ui-components/Table';
+import { Table } from '@/components/Table';
 
 function TableView() {
   return (

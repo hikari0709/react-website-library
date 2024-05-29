@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui-components/Button/';
+import { Button } from '@/components/Button/';
 
 const ButtonView = () => {
   return (

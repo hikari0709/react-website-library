@@ -1,16 +1,25 @@
-'use client';
+import { FC, ComponentProps, ReactNode } from 'react';
+import { twJoin } from 'tailwind-merge';
+import { ListItem } from '@/components/ListItem';
 
-import { FC, ComponentProps } from 'react';
+type ListItemProps = {
+  content: ReactNode;
+};
 
-type Props = ComponentProps<'ul'>;
+type Props = {
+  listItems: ListItemProps[];
+} & Omit<ComponentProps<'ul'>, 'role' | 'class'>;
 
-export const UnorderedList: FC<Props> = ({ children }) => {
+export const UnorderedList: FC<Props> = ({ listItems, ...atr }) => {
   return (
     <ul
       role="list"
-      className="list-disc flex flex-col gap-y-1"
+      className={twJoin('list-disc flex flex-col gap-y-1')}
+      {...atr}
     >
-      {children}
+      {listItems.map((item, index) => (
+        <ListItem key={index}>{item.content}</ListItem>
+      ))}
     </ul>
   );
 };
