@@ -17,7 +17,7 @@ export default function page() {
         )}
       >
         <Link
-          href="/accordion/"
+          href="/accordion"
           className={twMerge(
             'group rounded-lg border border-transparent px-5 py-4 transition-colors',
             'hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
@@ -35,7 +35,7 @@ export default function page() {
         </Link>
 
         <Link
-          href="/card/"
+          href="/card"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -50,7 +50,7 @@ export default function page() {
         </Link>
 
         <Link
-          href="/table/"
+          href="/table"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -65,7 +65,7 @@ export default function page() {
         </Link>
 
         <Link
-          href="/list/"
+          href="/list"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -79,7 +79,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/orderedList/"
+          href="/orderedList"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -93,7 +93,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/definitionList/"
+          href="/definitionList"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -107,7 +107,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/image/"
+          href="/image"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -121,7 +121,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/anchor/"
+          href="/anchor"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -135,7 +135,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/menu/"
+          href="/menu"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -149,7 +149,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/heading/"
+          href="/heading"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -163,7 +163,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/button/"
+          href="/button"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -178,7 +178,7 @@ export default function page() {
         </Link>
 
         <Link
-          href="/tab/"
+          href="/tab"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">
@@ -192,7 +192,7 @@ export default function page() {
           </p>
         </Link>
         <Link
-          href="/divider/"
+          href="/divider"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <h2 className="mb-3 text-2xl font-semibold">

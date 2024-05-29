@@ -1,4 +1,4 @@
-import { Accordion } from '@/components/ui-components/Accordion/';
+import { Accordion } from '@/components/Accordion/';
 
 function Page() {
   return (
