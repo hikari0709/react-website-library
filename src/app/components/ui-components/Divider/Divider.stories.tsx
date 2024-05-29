@@ -25,9 +25,11 @@ export const Dashed: Story = {
 };
 
 export const Horizontal: Story = {
-  args: {
-    ...Default.args,
-    horizontal: true,
-  },
-  render: (args) => <Divider {...args} />
+  render: () => (
+    <div className="flex">
+      <div className="h-6"></div>
+      <Divider horizontal />
+      <div className="h-6"></div>
+    </div>
+  ),
 };

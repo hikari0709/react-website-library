@@ -19,9 +19,12 @@ type DividerVariants = Required<VariantProps<typeof divider>>;
 
 type Props = {
   horizontal?: boolean;
-  borderType: DividerVariants['borderType'];
+  borderType?: DividerVariants['borderType'];
 };
 
-export const Divider: FC<Props> = ({ horizontal, borderType }) => {
+export const Divider: FC<Props> = ({
+  horizontal = false,
+  borderType = 'solid',
+}) => {
   return <div className={divider({ horizontal, borderType })}></div>;
 };
