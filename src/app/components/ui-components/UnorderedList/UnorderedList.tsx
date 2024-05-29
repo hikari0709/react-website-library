@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, ComponentProps, ReactNode } from 'react';
 import { twJoin } from 'tailwind-merge';
 import { ListItem } from '@/components/ListItem';
