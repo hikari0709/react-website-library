@@ -13,13 +13,21 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     horizontal: false,
-    type: 'solid',
+    borderType: 'solid',
   },
 };
 
 export const Dashed: Story = {
   args: {
     horizontal: false,
-    type: 'dashed',
+    borderType: 'dashed',
   },
+};
+
+export const Horizontal: Story = {
+  args: {
+    ...Default.args,
+    horizontal: true,
+  },
+  render: (args) => <Divider {...args} />
 };
