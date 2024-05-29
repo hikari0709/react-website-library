@@ -11,9 +11,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    listItems: [
-      { key: 'Item 1', content: 'Item 1' },
-      { key: 'Item 2', content: 'Item 2' },
-    ],
+    listItems: [{ content: 'Item 1' }, { content: 'Item 2' }],
   },
 };
