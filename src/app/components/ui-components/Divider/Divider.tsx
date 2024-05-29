@@ -1,6 +1,5 @@
 'use client';
 import { FC } from 'react';
-import { tv } from 'tailwind-variants';
 
 type Props = {
   type: string;
