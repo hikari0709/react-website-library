@@ -5,7 +5,6 @@ import { twJoin } from 'tailwind-merge';
 import { ListItem } from '@/components/ListItem';
 
 type ListItemProps = {
-  key: string;
   content: ReactNode;
 };
 
@@ -20,8 +19,8 @@ export const UnorderedList: FC<Props> = ({ listItems, ...atr }) => {
       className={twJoin('list-disc flex flex-col gap-y-1')}
       {...atr}
     >
-      {listItems.map((item) => (
-        <ListItem key={item.key}>{item.content}</ListItem>
+      {listItems.map((item, index) => (
+        <ListItem key={index}>{item.content}</ListItem>
       ))}
     </ul>
   );
