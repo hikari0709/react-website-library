@@ -22,7 +22,7 @@ export const Quote: FC<PropsWithChildren<Props>> = ({
           href={quoteUrl}
           className="text-blue-500"
         >
-          {quoteText}
+          <cite className="not-italic">{quoteText}</cite>
         </a>
       </footer>
     </blockquote>
