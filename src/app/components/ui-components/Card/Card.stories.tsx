@@ -8,23 +8,22 @@ const meta = {
     layout: 'centered',
     controls: { sort: 'alpha' },
   },
-  tags: ['autodocs'],
   argTypes: {
-    advanced: { control: 'boolean' },
-    bgColor: {
+    padding: {
       control: 'radio',
-      options: ['bg-gray-100', 'bg-gray-200', 'bg-gray-300'],
+      options: [1, 2, 4, 6, 8],
+    },
+    shadow: {
+      control: 'radio',
+      options: ['sm', 'default', 'md', 'lg'],
     },
   },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    title: 'cardにheadingを設定したいときに入力してください',
-    children:
-      'cardのコンテンツをここに入れます。HTMLなども入れることも自由に入れることができます',
-  },
+  args: { children: 'Card content' },
 };

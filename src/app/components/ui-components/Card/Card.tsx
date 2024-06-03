@@ -1,21 +1,13 @@
 import { FC, PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-/**
- * paddingは持たない or 調整できるようにする
- * headerとbodyとfooterに分けるのも良さそう
- * cardの周辺はshadowの大きさで調整してborderはつけない、radiusはつけておく
- * borderの太さは通常と強調の2種類
- */
-
 type Props = PropsWithChildren<{
-  title: string;
-  advanced?: boolean;
-  padding: 1 | 2 | 4 | 6 | 8;
+  padding?: 1 | 2 | 4 | 6 | 8;
+  shadow?: 'sm' | 'md' | 'lg';
 }>;
 
 const card = tv({
-  base: 'rounded border border-defaultBorder',
+  base: 'rounded shadow',
   variants: {
     padding: {
       1: 'p-1',
@@ -24,12 +16,17 @@ const card = tv({
       6: 'p-6',
       8: 'p-8',
     },
+    shadow: {
+      sm: 'shadow-sm',
+      md: 'shadow-md',
+      lg: 'shadow-lg',
+    },
   },
 });
 
-export const Card: FC<Props> = ({ children, padding = 4 }) => {
+export const Card: FC<Props> = ({ children, padding = 4, shadow }) => {
   return (
-    <div className={card({ padding })}>
+    <div className={card({ padding, shadow })}>
       <div className="w-full h-auto bg-white box-border">{children}</div>
     </div>
   );
