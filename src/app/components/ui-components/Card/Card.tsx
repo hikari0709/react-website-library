@@ -1,36 +1,36 @@
-'use client';
 import { FC, PropsWithChildren } from 'react';
-import Image from 'next/image';
+import { tv } from 'tailwind-variants';
 
 /**
- * 画像が必ずあるとは限らないので変数もしくはchildrenとしての扱いに変える
- * そうなるとcardコンポーネントはborderとpaddingを持っているだけのものになる？
- * paddingも画像をcardコンポーネント全体に広げて表示したい場合には必要がない時もある
- * 調整したいところは、border-radiusの有無、大きさも調整したい？とpaddingの有無と大きさ
- * もしかするとPRなどつけたい時にラップするborderの色や太さ、種類も変えたい場合もあるかもしれない
+ * paddingは持たない or 調整できるようにする
+ * headerとbodyとfooterに分けるのも良さそう
+ * cardの周辺はshadowの大きさで調整してborderはつけない、radiusはつけておく
+ * borderの太さは通常と強調の2種類
  */
 
 type Props = PropsWithChildren<{
   title: string;
-  bgColor?: string;
   advanced?: boolean;
+  padding: 1 | 2 | 4 | 6 | 8;
 }>;
 
-export const Card: FC<Props> = ({ title, children, bgColor }) => {
+const card = tv({
+  base: 'rounded border border-defaultBorder',
+  variants: {
+    padding: {
+      1: 'p-1',
+      2: 'p-2',
+      4: 'p-4',
+      6: 'p-6',
+      8: 'p-8',
+    },
+  },
+});
+
+export const Card: FC<Props> = ({ children, padding = 4 }) => {
   return (
-    <div className={`w-72 rounded p-2 border border-defaultBorder ${bgColor}`}>
-      <div className="w-full h-auto mb-3">
-        <Image
-          src="https://placehold.jp/640x360.png"
-          alt=""
-          width={640}
-          height={360}
-        />
-      </div>
-      <div className="w-full h-auto bg-white box-border">
-        <p className="text-lg font-bold mb-1">{title}</p>
-        <p className="text-sm">{children}</p>
-      </div>
+    <div className={card({ padding })}>
+      <div className="w-full h-auto bg-white box-border">{children}</div>
     </div>
   );
 };

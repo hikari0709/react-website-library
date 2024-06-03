@@ -26,6 +26,5 @@ export const Default: Story = {
     title: 'cardにheadingを設定したいときに入力してください',
     children:
       'cardのコンテンツをここに入れます。HTMLなども入れることも自由に入れることができます',
-    bgColor: 'bg-gray-600',
   },
 };
