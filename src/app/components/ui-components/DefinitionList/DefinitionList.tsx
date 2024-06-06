@@ -1,20 +1,20 @@
-'use client';
-import ReactNode from 'react';
+import { FC, PropsWithChildren, Children } from 'react';
+/**
+ * dtとddを横並びにできるように
+ * dtとddのセットとセパレートするようにdividerを入れられるようにする？
+ */
 
-type Props = {
-  listItem: {
-    title: string;
-    detail: string;
-  };
-};
-
-export const DefinitionList = ({ listItem }: Props) => {
+export const DefinitionList: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <dl>
-      <div>
-        <dt>{listItem.title}</dt>
-        <dd>{listItem.detail}</dd>
-      </div>
+    <dl className="flex flex-col gap-y-3">
+      {Children.map(children, (child, index) => (
+        <div
+          key={index}
+          className="flex flex-col gap-y-1"
+        >
+          {child}
+        </div>
+      ))}
     </dl>
   );
 };

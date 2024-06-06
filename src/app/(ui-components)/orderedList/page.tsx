@@ -1,13 +1,11 @@
-import { OrderedList } from '@/components/OrderedList';
+import { OrderedList } from '@/components/ui-components/OrderedList';
 
 const OrderedListView = () => {
   return (
     <main>
       <h1>順番リスト（ol）</h1>
       <OrderedList
-        headingText="順番リストのheadingテキスト"
-        listItems={['apple', 'orange']}
-      />
+        listItems={[{ content: 'Item 1' }, { content: 'Item 2' }]} />
     </main>
   );
 };
