@@ -11,6 +11,9 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  experimental: {
+    optimizePackageImports: ['@untitled-theme/icons-react'],
+  },
 };
 
 module.exports = nextConfig;
