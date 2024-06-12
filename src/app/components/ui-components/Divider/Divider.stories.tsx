@@ -10,26 +10,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    horizontal: false,
-    borderType: 'solid',
-  },
-};
-
-export const Dashed: Story = {
-  args: {
-    horizontal: false,
-    borderType: 'dashed',
-  },
-};
+export const Default: Story = {};
 
 export const Horizontal: Story = {
   render: () => (
-    <div className="flex">
-      <div className="h-6"></div>
-      <Divider horizontal />
-      <div className="h-6"></div>
-    </div>
+    <section className="flex gap-2">
+      {['りんご', 'みかん', 'バナナ', 'メロン', 'ぶどう'].map((item, index) => (
+        <>
+          <div
+            key={index}
+            className="h-6"
+          >
+            {item}
+          </div>
+          <Divider horizontal />
+        </>
+      ))}
+    </section>
   ),
 };

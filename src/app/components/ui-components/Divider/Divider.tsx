@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const divider = tv({
-  base: 'border-gray-400',
+  base: 'border-gray-400 block',
   variants: {
     horizontal: {
       true: 'border-l',
@@ -26,5 +26,5 @@ export const Divider: FC<Props> = ({
   horizontal = false,
   borderType = 'solid',
 }) => {
-  return <div className={divider({ horizontal, borderType })}></div>;
+  return <span className={divider({ horizontal, borderType })}></span>;
 };
