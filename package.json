@@ -16,6 +16,7 @@
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "@untitled-theme/icons-react": "^0.10.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
@@ -39,8 +40,8 @@
     "@storybook/nextjs": "^8.0.5",
     "@storybook/react": "^8.0.5",
     "eslint-plugin-storybook": "^0.6.15",
-    "storybook": "^8.0.5",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "0.5.4"
+    "prettier-plugin-tailwindcss": "0.5.4",
+    "storybook": "^8.0.5"
   }
 }
