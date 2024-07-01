@@ -2,19 +2,19 @@ import { FC, PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
 type Props = PropsWithChildren<{
-  padding?: 1 | 2 | 4 | 6 | 8;
+  padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   shadow?: 'sm' | 'md' | 'lg';
 }>;
 
 const card = tv({
-  base: 'rounded shadow',
+  base: 'rounded shadow w-full h-auto bg-white box-border',
   variants: {
     padding: {
-      1: 'p-1',
-      2: 'p-2',
-      4: 'p-4',
-      6: 'p-6',
-      8: 'p-8',
+      xs: 'p-1',
+      sm: 'p-2',
+      md: 'p-4',
+      lg: 'p-6',
+      xl: 'p-8',
     },
     shadow: {
       sm: 'shadow-sm',
@@ -24,10 +24,10 @@ const card = tv({
   },
 });
 
-export const Card: FC<Props> = ({ children, padding = 4, shadow }) => {
-  return (
-    <div className={card({ padding, shadow })}>
-      <div className="w-full h-auto bg-white box-border">{children}</div>
-    </div>
-  );
+export const Card: FC<Props> = ({
+  children,
+  padding = 'md',
+  shadow = 'sm',
+}) => {
+  return <div className={card({ padding, shadow })}>{children}</div>;
 };

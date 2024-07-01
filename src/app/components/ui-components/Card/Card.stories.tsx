@@ -11,11 +11,11 @@ const meta = {
   argTypes: {
     padding: {
       control: 'radio',
-      options: [1, 2, 4, 6, 8],
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
     },
     shadow: {
       control: 'radio',
-      options: ['sm', 'default', 'md', 'lg'],
+      options: ['sm', 'md', 'lg'],
     },
   },
   tags: ['autodocs'],
