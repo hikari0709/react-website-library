@@ -1,11 +1,30 @@
-'use client';
 import { FC } from 'react';
+import { tv, type VariantProps } from 'tailwind-variants';
+
+const divider = tv({
+  base: 'border-gray-400 block',
+  variants: {
+    horizontal: {
+      true: 'border-l',
+      false: 'border-t',
+    },
+    borderType: {
+      solid: 'border-solid',
+      dashed: 'border-dashed',
+    },
+  },
+});
+
+type DividerVariants = Required<VariantProps<typeof divider>>;
 
 type Props = {
-  type: string;
-  spacing: string;
+  horizontal?: boolean;
+  borderType?: DividerVariants['borderType'];
 };
 
-export const Divider: FC<Props> = ({ type, spacing }) => {
-  return <div className="border-t border-black"></div>;
+export const Divider: FC<Props> = ({
+  horizontal = false,
+  borderType = 'solid',
+}) => {
+  return <span className={divider({ horizontal, borderType })}></span>;
 };
