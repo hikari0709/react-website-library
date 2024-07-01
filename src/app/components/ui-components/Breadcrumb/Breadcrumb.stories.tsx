@@ -9,4 +9,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Breadcrumb>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    breadcrumb: [
+      { name: 'top', url: '/' },
+      { name: 'second page', url: '/second-page' },
+      { name: 'third page', url: '/third-page' },
+    ],
+  },
+};
