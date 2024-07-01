@@ -1,23 +1,26 @@
 import { FC } from 'react';
 import { ChevronRightIcon } from '@untitled-theme/icons-react';
 
-const breadcrumb = [
-  { name: 'top', url: '/' },
-  { name: 'second page', url: '/second-page' },
-  { name: 'third page', url: '/third-page' },
-];
+type Props = {
+  breadcrumb: { name: string; url: string }[];
+};
 
-export const Breadcrumb: FC = () => {
+export const Breadcrumb: FC<Props> = ({ breadcrumb }) => {
   return (
-    <nav>
+    <nav aria-label="パンくずリスト">
       <ol className="flex gap-5">
-        {breadcrumb.map((item) => (
+        {breadcrumb.map((item, index) => (
           <li
             key={item.url}
             className="flex gap-1 items-center"
           >
-            {item.name}
-            <ChevronRightIcon />
+            <a
+              href={item.url}
+              className="hover:underline"
+            >
+              {item.name}
+            </a>
+            {breadcrumb.length - 1 !== index && <ChevronRightIcon />}
           </li>
         ))}
       </ol>
