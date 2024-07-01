@@ -2,13 +2,13 @@ import { FC, PropsWithChildren } from 'react';
 
 type Props = {
   quoteUrl: string;
-  quoteText: string;
+  quoteTitle: string;
 };
 
 export const Quote: FC<PropsWithChildren<Props>> = ({
   children,
   quoteUrl,
-  quoteText,
+  quoteTitle,
 }) => {
   return (
     <blockquote
@@ -18,12 +18,16 @@ export const Quote: FC<PropsWithChildren<Props>> = ({
       {children}
       <footer className="text-sm">
         引用：
-        <a
-          href={quoteUrl}
-          className="text-blue-500"
-        >
-          <cite className="not-italic">{quoteText}</cite>
-        </a>
+        <cite className="not-italic">
+          <a
+            href={quoteUrl}
+            className="text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {quoteTitle}
+          </a>
+        </cite>
       </footer>
     </blockquote>
   );

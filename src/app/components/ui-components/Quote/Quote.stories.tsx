@@ -12,14 +12,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     quoteUrl: 'https://example.com',
-    quoteText: 'example.com',
+    quoteTitle: 'example.com',
+    children: <p>これは引用です。</p>,
   },
-  render: ({ quoteUrl, quoteText }) => (
-    <Quote
-      quoteUrl={quoteUrl}
-      quoteText={quoteText}
-    >
-      <p>これは引用です。</p>
-    </Quote>
-  ),
 };
