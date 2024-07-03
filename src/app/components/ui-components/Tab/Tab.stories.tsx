@@ -34,17 +34,3 @@ export const Default: Story = {
     ],
   },
 };
-
-export const SelectedSecondaryTab: Story = {
-  args: {
-    initialActiveTab: 1,
-    tabs: ['tab1', 'tab2'],
-    children: [
-      <div key="tab1">
-        ここにtab1コンテンツ用の<span className="text-green-600">HTML</span>
-        が入ります
-      </div>,
-      <div key="tab2">ここにtab2コンテンツ用のHTMLが入ります</div>,
-    ],
-  },
-};
