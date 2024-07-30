@@ -1,26 +1,32 @@
-'use client';
-// 入れ子できるようなアコーディオンは別のコンポーネントとして定義する
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { twJoin } from 'tailwind-merge';
 
 type Props = {
-  initialActive?: boolean;
   summary: string;
   children: ReactNode;
 };
 
-export const Accordion = ({
-  initialActive = false,
-  summary,
-  children,
-}: Props): JSX.Element => {
-  const [accordionActive, setAccordionActive] = useState(initialActive);
+export const Accordion = ({ summary, children }: Props): JSX.Element => {
   return (
     <details
-      className="rounded"
-      open={accordionActive}
+      className={twJoin(
+        'border-solid border-t divide-gray-400 cursor-pointer',
+        'hover:bg-gray-100',
+        '[&_svg]:open:-rotate-180'
+      )}
     >
-      <summary className="p-2">{summary}</summary>
-      <div className="p-2">{children}</div>
+      {/* safariでの表示確認をする */}
+      <summary className="p-2 flex items-center justify-between">
+        {summary}
+        <MdKeyboardArrowDown
+          size={24}
+          className="transition-all duration-300"
+        />
+      </summary>
+      <div className="p-2">
+        <p>{children}</p>
+      </div>
     </details>
   );
 };

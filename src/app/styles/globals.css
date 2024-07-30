@@ -20,25 +20,10 @@ main {
   padding: 12px;
 }
 
-details {
-  border: 1px solid #ccc;
+details summary {
+  display: block;
 }
 
 summary::-webkit-details-marker {
   display: none;
-}
-
-details[open] summary {
-  border-bottom: 1px solid #ccc;
-}
-
-details[open] svg {
-  transform: rotate(180deg);
-}
-
-details[open] div {
-  visibility: visible;
-  transition: line-height 0.3s ease-out, opacity 0.1s linear 0.1s,
-    visibility 0.1s linear 0.1s;
-  transition-duration: 300ms;
 }

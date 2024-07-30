@@ -15,16 +15,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    initialActive: false,
     summary: 'summaryが入ります',
-    children: 'ここにコンテンツの内容が入ります',
+    children: 'ここに',
   },
 };
 
 export const AccordionOpen: Story = {
   args: {
-    initialActive: true,
     summary: 'summaryが入ります',
-    children: 'ここにコンテンツの内容が入ります',
+    children: 'ここにコ',
   },
+  decorators: [
+    (Story) => (
+      <div className="w-[700px]">
+        <Story />
+      </div>
+    ),
+  ],
 };
