@@ -5,57 +5,26 @@
  * ・横スクロールの有無
  * ・colspanやrowspanも操作できるようにしたい、1行の単位をobjectで管理した方が良さそう
  */
-interface Cell {
-  text: string;
-  row?: number;
-  col?: number;
-}
-type Props = {
-  head: Array<Array<Cell>>;
-  body: Array<Array<string>>;
-  bodyTableHeader?: Boolean;
-};
 
-export const Table = ({ head, body, bodyTableHeader }: Props): JSX.Element => {
+export const Table = () => {
   return (
-    <table className="border border-solid border-gray-300">
-      <thead>
-        {head.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {row.map((cell, cellIndex) => (
-              <th
-                key={cellIndex}
-                className="border border-solid border-gray-300"
-              >
-                {}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody>
-        {body.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {row.map((cell, cellIndex) =>
-              bodyTableHeader && cellIndex === 0 ? (
-                <th
-                  key={cellIndex}
-                  className="border border-solid border-gray-300"
-                >
-                  {cell}
-                </th>
-              ) : (
-                <td
-                  key={cellIndex}
-                  className="border border-solid border-gray-300"
-                >
-                  {cell}
-                </td>
-              )
-            )}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="js-scrollable overflow-x-scroll">
+      <table className="min-w-full">
+          <thead>
+            <tr>
+              <th className="border min-w-36">Col1</th>
+              <th className="border min-w-36">Col2</th>
+              <th className="border min-w-36">Col3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border min-w-36">Lorem ipsum dolor sit.</td>
+              <td className="border min-w-36">Lorem ipsum dolor sit.</td>
+              <td className="border min-w-36">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, magnam.</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
   );
 };
