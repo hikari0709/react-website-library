@@ -1,7 +1,8 @@
 'use client';
-import { type FC, type PropsWithChildren, useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
-import ScrollHint from 'scroll-hint'
+import { type FC, type PropsWithChildren, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import ScrollHint from 'scroll-hint';
+
 /**
  * 変化する部分はpropsにして渡したい
  * ・列の幅も指定したいときもある
@@ -47,7 +48,6 @@ const useScrollHint = (selector: string) => {
     if (inView)
       new ScrollHint(selector, {
         scrollHintIconAppendClass: 'scroll-hint-icon-white', // white-icon will appear
-        applyToParents: true,
         i18n: {
           scrollable: 'スクロールできます'
         }
@@ -56,26 +56,37 @@ const useScrollHint = (selector: string) => {
   return { ref }
 }
 
-export const Table = () => {
-  const { ref } = useScrollHint('.js-scrollable')
+export const Table: FC = () => {
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    new ScrollHint('.js-scrollable', {
+      scrollHintIconAppendClass: 'scroll-hint-icon-white',
+      i18n: {
+        scrollable: 'スクロールできます'
+      }
+    });
+  }, [inView])
+
   return (
-    <div className="js-scrollable overflow-x-scroll" ref={ref}>
-      <table className="min-w-full">
-          <thead>
-            <tr>
-              <th className="border min-w-36">Col1</th>
-              <th className="border min-w-36">Col2</th>
-              <th className="border min-w-36">Col3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border min-w-36">Lorem ipsum dolor sit.</td>
-              <td className="border min-w-36">Lorem ipsum dolor sit.</td>
-              <td className="border min-w-36">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, magnam.</td>
-            </tr>
-          </tbody>
-        </table>
+    <div className="js-scrollable overflow-x-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th className="border min-w-36">Col1</th>
+            <th className="border min-w-36">Col2</th>
+            <th className="border min-w-36">Col3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border min-w-36">Lorem ipsum dolor sit.</td>
+            <td className="border min-w-36">Lorem ipsum dolor sit.</td>
+            <td className="border min-w-36">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, magnam.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
+
