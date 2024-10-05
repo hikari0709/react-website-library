@@ -1,6 +1,6 @@
-import { FC, ComponentProps } from 'react';
+import type { FC, ComponentProps } from "react";
 
-type Props = JSX.IntrinsicElements['li'] & ComponentProps<'li'>;
+type Props = JSX.IntrinsicElements["li"] & ComponentProps<"li">;
 
 export const ListItem: FC<Props> = ({ children }) => {
   return <li>{children}</li>;

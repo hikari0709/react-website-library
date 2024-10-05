@@ -1,5 +1,5 @@
-'use client';
-import { ReactNode } from 'react';
+"use client";
+import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -14,11 +14,12 @@ type Props = {
  * ボタンテキストを好きなところで改行したという要望もあるかもしれないけどそれにはどう対応するか？
  */
 
-export const Button = ({ children, type = 'primary', label }: Props) => {
-  const backgroundColor = type === 'secondary' ? 'bg-gray-50' : 'bg-green-600';
-  const textColor = type === 'secondary' ? 'text-gray-800' : 'text-white';
+export const Button = ({ children, type = "primary", label }: Props) => {
+  const backgroundColor = type === "secondary" ? "bg-gray-50" : "bg-green-600";
+  const textColor = type === "secondary" ? "text-gray-800" : "text-white";
   return (
     <button
+      type="button"
       className={`bg-brand-50 p-2 border-divider rounded ${backgroundColor} ${textColor}`}
     >
       {label && (

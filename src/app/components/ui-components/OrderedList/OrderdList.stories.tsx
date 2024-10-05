@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { OrderedList } from './OrderedList';
+import type { Meta, StoryObj } from "@storybook/react";
+import { OrderedList } from "./OrderedList";
 
 const meta = {
-  title: 'Components/OrderedList',
+  title: "Components/OrderedList",
   component: OrderedList,
 } satisfies Meta<typeof OrderedList>;
 
@@ -11,6 +11,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    listItems: [{ content: 'Item 1' }, { content: 'Item 2' }],
+    listItems: [{ content: "Item 1" }, { content: "Item 2" }],
   },
 };

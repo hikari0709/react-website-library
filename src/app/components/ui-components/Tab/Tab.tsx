@@ -1,5 +1,10 @@
-'use client';
-import React, { FC, PropsWithChildren, ReactNode, useState } from 'react';
+"use client";
+import React, {
+  type FC,
+  type PropsWithChildren,
+  type ReactNode,
+  useState,
+} from "react";
 
 type Props = {
   initialActiveTab?: number;
@@ -24,8 +29,8 @@ export const Tab: FC<Props> = ({ initialActiveTab = 0, tabs, children }) => {
             onClick={() => handleClick(index)}
             className={`border border-t-4 border-b-0 rounded-t-sm p-1 flex-grow ${
               activeTab === index
-                ? 'border-brand-600 bg-white'
-                : 'border-divider bg-gray-100'
+                ? "border-brand-600 bg-white"
+                : "border-divider bg-gray-100"
             }`}
           >
             {tab}
